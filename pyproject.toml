@@ -1,0 +1,38 @@
+[project]
+name = "streamlit-redaction-improver-modern"
+version = "0.2.0"
+description = "Modern version of streamlit text redaction app with updated dependencies"
+authors = [
+    {name = "julio colomer", email = "info@aiaccelera.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13.3"
+dependencies = [
+    "streamlit>=1.49.0",
+    "langchain-core>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "python-dotenv>=1.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.1.1",
+    "ipykernel>=6.29.0",
+    "black>=24.0.0",
+    "ruff>=0.8.0"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.black]
+line-length = 88
+target-version = ['py313']
